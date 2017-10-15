@@ -4,23 +4,19 @@
  */
 
 #ifdef HAVE_CONFIG_H
-#  include <config.h>
+#include <config.h>
 #endif
 
 #include <gtk/gtk.h>
-
 #include "interface.h"
 #include "support.h"
 
 
 
 
-
-
 #define G_CALLBACK(f) ((GCallback) (f))
 
-int
-main (int argc, char *argv[])
+int main (int argc, char *argv[])
 {
 
   GtkWidget *window1;
@@ -44,8 +40,7 @@ main (int argc, char *argv[])
 
   window1 = create_window1();
   
-  g_signal_connect(window1,"destroy",
-                 G_CALLBACK(gtk_main_quit),NULL); 
+  g_signal_connect(window1,"destroy", G_CALLBACK(gtk_main_quit),NULL); 
   
   gtk_container_set_border_width (GTK_CONTAINER (window1),30);
 
